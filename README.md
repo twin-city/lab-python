@@ -1,5 +1,5 @@
-# lab-cv
-_Dépot qui permet de construire une image docker boîte à outil en Computer-Vision, avec une sur-couche ovh pour profiter du service ai-training (notebook, gestion mémoire...)._
+# lab-python
+_Dépot qui permet de construire une image docker boîte à outil python3, avec une sur-couche ovh pour profiter du service ai-training (notebook, gestion mémoire...)._
 
 # Prérequis
 
@@ -20,7 +20,7 @@ En tant qu'utilisateur:
 
 1. Lancer un job (= 1 container): `make deploy-job`
 
-2. Voir les logs et les jobs en cours [(docs)](https://docs.ovh.com/gb/en/ai-training/usage-client/). Par exemple, suivre le lien url de `make data-upload SRC=mon.fichier DST=lab-cv-data`
+2. Voir les logs et les jobs en cours [(docs)](https://docs.ovh.com/gb/en/ai-training/usage-client/). Par exemple, suivre le lien url de `make data-upload SRC=mon.fichier DST=data`
 
 3. Pour lancer un script sans notebook : `make deploy-job command="python /workspace/code/myscript.py"`
 
