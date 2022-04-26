@@ -119,7 +119,6 @@ RUN if [[ $(/lab/bin/jupyter kernelspec list | grep 'python3 */usr/local/share/j
 
 
 USER ovh
-RUN mkdir /workspace && chown -R 42420:42420 /workspace
 WORKDIR /workspace
 COPY requirements.txt requirements.txt
 COPY workspace/* ./
