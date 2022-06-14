@@ -1,12 +1,13 @@
-export IMAGE_NAME=twin-city
-export PROJECT_NAME=twincity
+export IMAGE_NAME=lab-cv
+export ORGA_NAME=datalab-mi
+export PROJECT_NAME=twincity-prepare_data
 export APP_PATH := $(shell pwd)
-export VERSION := v0.1
+export VERSION := v0.1.2
 export USER := $(shell whoami)
 export NB_GPUS := 0
-export NB_CPUS := 2 # this value is ignored if NB_GPUS is specified.
+export NB_CPUS := 2# this value is ignored if NB_GPUS is specified.
 export REGION := gra
-export PROJECT_DATA_RIGHTS := rwd
+export PROJECT_DATA_RIGHTS := rw
 export JOB=$(cat job.json | jq '.id')
 
 dummy	:= $(shell touch artifacts)
@@ -23,10 +24,10 @@ deploy-job:
 		--gpu ${NB_GPUS} \
 		--cpu ${NB_CPUS} \
 		--name ${PROJECT_NAME}-${USER}-${NB_GPUS}GPU-${NB_CPUS}CPU \
-		--label user=${USER}\
+		--label user=${USER} \
 		--volume ${PROJECT_NAME}-home@${REGION}:/workspace/home:${PROJECT_DATA_RIGHTS} \
 		--output json \
-		ghcr.io/datalab-mi/${IMAGE_NAME}:${VERSION} > job.json \
+		ghcr.io/${ORGA_NAME}/${IMAGE_NAME}:${VERSION} > job.json \
 		$(command)
 	@cat job.json | jq '.status.jobUrl'
 
