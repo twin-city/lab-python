@@ -1,6 +1,6 @@
 export IMAGE_NAME=lab-cv
 export ORGA_NAME=datalab-mi
-export PROJECT_NAME=twincity-prepare_data
+export PROJECT_NAME=twincity-blurring
 export APP_PATH := $(shell pwd)
 export VERSION := v0.1.2
 export USER := $(shell whoami)
