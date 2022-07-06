@@ -1,8 +1,8 @@
 export IMAGE_NAME=lab-cv
-export ORGA_NAME=datalab-mi
+export ORGA_NAME=twin-city
 export PROJECT_NAME=twincity-blurring
 export APP_PATH := $(shell pwd)
-export VERSION := v0.1.2
+export VERSION := v0.2
 export USER := $(shell whoami)
 export NB_GPUS := 0
 export NB_CPUS := 2# this value is ignored if NB_GPUS is specified.
