@@ -17,6 +17,7 @@ _Dépot qui permet de construire une image docker boîte à outil python3, avec 
 En tant qu'utilisateur:
 
 0. Spécifier les options dans le fichier artifacts (à completer avec VERSION, NB_GPUS, NB_CPUS)
+```cp artifacts.sample artifacts```
 
 1. Lancer un job (= 1 container): `make deploy-job`
 
