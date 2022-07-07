@@ -1,4 +1,4 @@
-export IMAGE_NAME=lab-cv
+export IMAGE_NAME=lab-python
 export ORGA_NAME=twin-city
 export PROJECT_NAME=twincity-blurring
 export APP_PATH := $(shell pwd)
